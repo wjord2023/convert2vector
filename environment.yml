@@ -1,0 +1,17 @@
+name: clip-env
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - ftfy
+  - regex
+  - tqdm
+  - pip:
+    - git+https://github.com/openai/CLIP.git
+     - grpcio
+    - grpcio-tools
+  - pytorch
+  - numpy
+  - torchvision

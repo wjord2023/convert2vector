@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package convert2vector;
+
+service ClipService {
+  rpc GetImageVector (ImageRequest) returns (VectorResponse);
+  rpc GetTextVector (TextRequest) returns (VectorResponse);
+}
+
+message ImageRequest {
+  bytes image = 1;
+}
+
+message TextRequest {
+  string text = 1;
+}
+
+message VectorResponse {
+  repeated float vector = 1;
+}
